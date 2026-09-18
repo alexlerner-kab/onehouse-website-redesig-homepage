@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0a0a0a"/><text x="100" y="105" font-family="Helvetica" font-size="60" fill="#E8B04B" text-anchor="middle">OH</text></svg>
+</template>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #fff; font-family: Quicksand, "Museo Sans Rounded", Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #E4002B; text-decoration: none; }
+  a:hover { color: #a3001f; }
+  doc-page:not(:defined) { visibility: hidden; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { animation-delay: -99s !important; animation-duration: .001s !important;
+      animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+      animation-play-state: running !important; transition-duration: 0s !important; }
+</style>
+<script src="./doc-page.js"></script>
+<script src="./image-slot.js"></script>
+</helmet>
+<div style="position: sticky; top: 0; z-index: 10; display: flex; justify-content: center; gap: 6px; padding: 10px; background: #fff; border-bottom: 1px solid #e6e6e6; font-family: Quicksand, Helvetica, sans-serif;">
+  <button onClick="{{ setDesktop }}" style="{{ desktopBtnStyle }}">Desktop</button>
+  <button onClick="{{ setMobile }}" style="{{ mobileBtnStyle }}">Mobile</button>
+</div>
+
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+<div style="width: 100%; max-width: 1600px; margin: 0 auto; padding: 0 0 56px; box-sizing: border-box; color: #111; font-family: Quicksand, Helvetica, sans-serif;">
+
+  <!-- HERO -->
+  <div style="position: relative; min-height: 640px; background: #0a0a0a; overflow: hidden; margin-bottom: 48px; display: flex; align-items: stretch;">
+    <div style="position: relative; flex: none; width: clamp(320px, 45vw, 720px); overflow: hidden; order: 2;">
+      <img src="uploads/DesireCode-hero.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 65% center; display: block;" />
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, #0a0a0a 0%, rgba(10,10,10,0.55) 22%, rgba(10,10,10,0.05) 50%, rgba(10,10,10,0.25) 100%);"></div>
+      <div style="position: absolute; left: 90px; right: 0px; bottom: 32px; display: flex; align-items: center; justify-content: flex-end; gap: 18px;">
+        <div style="width: 260px; height: 260px; border-radius: 50%; overflow: hidden; border: 4px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.4); flex: none;">
+          <img src="uploads/daniel_naor2-380x380.jpg" alt="Daniel Naor" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block;" />
+        </div>
+        <div style="font-size: 30px; font-weight: 700; color: #fff; line-height: 1.2;">Daniel Naor<span style="display: block; font-size: 18px; font-weight: 500; color: #e2e2e6;">Teacher</span></div>
+      </div>
+    </div>
+
+    <div style="position: relative; flex: 1 1 320px; min-width: 0; box-sizing: border-box; padding: clamp(28px, 4vw, 56px) clamp(20px, 3vw, 48px); display: flex; flex-direction: column; justify-content: center; gap: 16px; max-width: 720px; order: 1;">
+      <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(232,176,75,0.15); border: 1px solid rgba(232,176,75,0.4); border-radius: 999px; padding: 7px 16px; width: fit-content; font-size: 14px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #E8B04B;">Live Community Gathering</div>
+      <h1 style="margin: 0; font-size: clamp(30px, 4vw, 50px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; color: #fff;">The Desire Code: How to Create More of What You Want</h1>
+      <p style="margin: 0; font-size: clamp(15px, 1.6vw, 22px); line-height: 1.5; color: #d8d8dc; max-width: 620px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;">Our monthly hour of study and connection, live with the teachers. Come with a question; leave with a practice for the month ahead. Each session opens with a short teaching, moves into guided discussion, and closes with time for personal reflection. No prior learning is required, and every gathering stands on its own…</p>
+
+      <div style="display: flex; align-items: center; gap: 32px; margin-top: 10px; flex-wrap: wrap;">
+        <div>
+          <div style="font-size: 22px; font-weight: 700; color: #fff; letter-spacing: -0.01em; line-height: 1.2;">Friday, September 11</div>
+          <div style="font-size: 15px; font-weight: 500; color: #b9b9c2; margin-top: 2px;">05:30 PM EDT</div>
+        </div>
+        <div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #E8B04B; margin-bottom: 8px;">The gathering has started</div>
+          <div style="display: flex; gap: 8px;">
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.25); border-radius: 5px; padding: 5px 10px; text-align: center; min-width: 40px;">
+              <div style="font-size: 16px; font-weight: 700; color: #fff; line-height: 1;">00</div>
+              <div style="font-size: 8px; font-weight: 700; letter-spacing: 0.08em; color: #9a9aa0; margin-top: 3px;">DAYS</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.25); border-radius: 5px; padding: 5px 10px; text-align: center; min-width: 40px;">
+              <div style="font-size: 16px; font-weight: 700; color: #fff; line-height: 1;">00</div>
+              <div style="font-size: 8px; font-weight: 700; letter-spacing: 0.08em; color: #9a9aa0; margin-top: 3px;">HRS</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.25); border-radius: 5px; padding: 5px 10px; text-align: center; min-width: 40px;">
+              <div style="font-size: 16px; font-weight: 700; color: #fff; line-height: 1;">00</div>
+              <div style="font-size: 8px; font-weight: 700; letter-spacing: 0.08em; color: #9a9aa0; margin-top: 3px;">MIN</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.25); border-radius: 5px; padding: 5px 10px; text-align: center; min-width: 40px;">
+              <div style="font-size: 16px; font-weight: 700; color: #fff; line-height: 1;">00</div>
+              <div style="font-size: 8px; font-weight: 700; letter-spacing: 0.08em; color: #9a9aa0; margin-top: 3px;">SEC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 14px; margin-top: 8px;">
+        <a href="#" style="background: #E4002B; color: #fff; padding: 14px 26px; border-radius: 4px; font-size: 17px; font-weight: 700;" style-hover="background:#b80022">Register Now</a>
+        <a href="#" style="border: 1.5px solid rgba(255,255,255,0.5); color: #fff; padding: 13px 24px; border-radius: 4px; font-size: 17px; font-weight: 700;" style-hover="borderColor:#fff">Add to calendar</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 20px 48px; background: #f7efe6; border-bottom: 1px solid #e6dccd;">
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <div style="font-size: 22px; font-weight: 700; color: #111;">Your Onehouse</div>
+      <a href="#latest" style="font-size: 16px; font-weight: 600; color: #111;" style-hover="color:#E4002B">Latest</a>
+      <a href="#weekly-wisdom" style="font-size: 16px; font-weight: 600; color: #111;" style-hover="color:#E4002B">Weekly wisdom</a>
+      <a href="#live-events" style="font-size: 16px; font-weight: 600; color: #111;" style-hover="color:#E4002B">Live events</a>
+      <a href="#this-month" style="font-size: 16px; font-weight: 600; color: #111;" style-hover="color:#E4002B">This month</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <a href="#" style="display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 10px 18px; font-size: 15px; font-weight: 700; color: #111;" style-hover="borderColor:#111">My library <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+    </div>
+  </div>
+
+  <div style="padding: 0 0 0 48px; margin-top: 40px;">
+
+  <div id="latest" style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 28px; scroll-margin-top: 90px;">
+    <h1 style="margin: 0; font-size: 34px; font-weight: 700; color: #111;">This week at Onehouse</h1>
+    <div style="font-size: 14px; color: #999; letter-spacing: 0.02em;">Wisdom. Practice. Community.</div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 48px; align-items: start;">
+
+    <div>
+      <div style="display: grid; grid-template-columns: 260px 1fr; gap: 30px; align-items: start;">
+        <div style="position: relative; aspect-ratio: 1 / 1; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.10);">
+          <img src="uploads/michael-monica-with-sh-logo.jpg" alt="Spiritually Hungry with Michael &amp; Monica Berg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 4px;">
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #999;">Featured Podcast &middot; Ep. 248</div>
+          <h2 style="margin: 6px 0 0; font-size: 30px; font-weight: 700; line-height: 1.15; color: #111;">Love as a Practice</h2>
+          <div style="font-size: 17px; color: #555; margin-top: 4px;">Expanding the Boundaries of Who We Are</div>
+          <div style="font-size: 14px; color: #888; margin-top: 14px;">Spiritually Hungry</div>
+          <div style="font-size: 14px; color: #888;">with Monica &amp; Michael Berg</div>
+          <a href="#" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: #E4002B; margin-top: 16px;" style-hover="color:#a3001f">Listen to the episode <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+      </div>
+
+      <div id="weekly-wisdom" style="margin-top: 40px; scroll-margin-top: 90px;">
+        <h3 style="margin: 0 0 16px; font-size: 20px; font-weight: 700; color: #111;">This week's featured teachings</h3>
+        <div style="border-top: 1.5px solid #111;"></div>
+
+        <a href="#" style="display: grid; grid-template-columns: 96px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid #e6e6e6; align-items: center;" style-hover="background:#f7f7f7">
+          <div style="position: relative; aspect-ratio: 8/5; border-radius: 6px; overflow: hidden; background: #26262a;">
+            <img src="uploads/pasted-1787669210883-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div>
+            <div style="font-size: 13px; color: #999; margin-bottom: 4px;">Michael Berg &middot; From the archive</div>
+            <div style="font-size: 18px; font-weight: 700; color: #111; line-height: 1.25;">This week's Torah portion lecture</div>
+            <div style="font-size: 14px; color: #777; margin-top: 3px;">A prior-year teaching for the current Torah portion.</div>
+            <div style="font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 6px;">Teaching preview <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+          </div>
+        </a>
+        <a href="#" style="display: grid; grid-template-columns: 96px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid #e6e6e6; align-items: center;" style-hover="background:#f7f7f7">
+          <div style="position: relative; aspect-ratio: 8/5; border-radius: 6px; overflow: hidden; background: #26262a;">
+            <img src="uploads/pasted-1787669210883-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div>
+            <div style="font-size: 13px; color: #999; margin-bottom: 4px;">Michael Berg &middot; Latest lecture</div>
+            <div style="font-size: 18px; font-weight: 700; color: #111; line-height: 1.25;">Michael's latest teaching</div>
+            <div style="font-size: 14px; color: #777; margin-top: 3px;">The most recent lecture, usually last week's portion.</div>
+            <div style="font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 6px;">Teaching preview <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+          </div>
+        </a>
+        <a href="#" style="display: grid; grid-template-columns: 96px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid #e6e6e6; align-items: center;" style-hover="background:#f7f7f7">
+          <div style="position: relative; aspect-ratio: 8/5; border-radius: 6px; overflow: hidden;">
+            <img src="uploads/michael-monica-with-sh-logo.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div>
+            <div style="font-size: 13px; color: #999; margin-bottom: 4px;">Spiritually Hungry &middot; Episode 248</div>
+            <div style="font-size: 18px; font-weight: 700; color: #111; line-height: 1.25;">Love as a Practice</div>
+            <div style="font-size: 14px; color: #777; margin-top: 3px;">Expanding the Boundaries of Who We Are &mdash; Monica &amp; Michael Berg</div>
+            <div style="font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 6px;">Listen to the episode <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div id="live-events" style="background: #f7efe6; border-top: 2px solid #E8B04B; border-radius: 14px; padding: 26px; scroll-margin-top: 90px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+      <h3 style="margin: 0 0 18px; font-size: 22px; font-weight: 700; color: #111;">Live events</h3>
+
+      <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+        <button onClick="{{ setUpcomingTab }}" style="{{ upcomingTabStyle }}">Upcoming events</button>
+        <button onClick="{{ setMyEventsTab }}" style="{{ myEventsTabStyle }}">My events</button>
+      </div>
+
+      <sc-if value="{{ isUpcomingTab }}" hint-placeholder-val="{{ true }}">
+      <div style="background: #fff; border: 1px solid #e2d5c2; border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #999;">Filter events</div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+        <select style="background: #fff; border: 1px solid #ccc; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 600; color: #333;">
+          <option>Language</option>
+          <option>English</option>
+          <option>Hebrew</option>
+          <option>Spanish</option>
+        </select>
+<div style="position: relative;">
+          <button onClick="{{ toggleLocationOpen }}" style="{{ locationButtonStyle }}">{{ locationButtonLabel }} &#9662;</button>
+          <sc-if value="{{ locationOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position: absolute; top: calc(100% + 6px); left: 0; z-index: 20; width: 240px; background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); overflow: hidden;">
+            <div style="padding: 8px; border-bottom: 1px solid #eee;">
+              <input type="text" value="{{ locationSearch }}" onChange="{{ setLocationSearch }}" placeholder="Search centres…" style="width: 100%; box-sizing: border-box; border: 1px solid #ddd; border-radius: 6px; padding: 7px 10px; font-size: 13px;" />
+            </div>
+            <div style="max-height: 220px; overflow-y: auto; padding: 4px 0;">
+              <sc-for list="{{ filteredCentres }}" as="c" hint-placeholder-count="6">
+                <label style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; font-size: 13px; color: #333; cursor: pointer;" style-hover="background:#f7f7f7">
+                  <input type="checkbox" checked="{{ c.selected }}" onChange="{{ c.toggle }}" />
+                  {{ c.name }}
+                </label>
+              </sc-for>
+            </div>
+          </div>
+          </sc-if>
+        </div>
+        <div style="width: 1px; height: 22px; background: #e2d5c2;"></div>
+        <div style="display: inline-flex; border: 1px solid #ccc; border-radius: 999px; overflow: hidden;">
+          <button onClick="{{ setAllFormat }}" style="{{ allFormatStyle }}">All</button>
+          <button onClick="{{ setLiveFormat }}" style="{{ liveFormatStyle }}">Online</button>
+          <button onClick="{{ setInPersonFormat }}" style="{{ inPersonFormatStyle }}">In-person</button>
+        </div>
+        </div>
+        <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: #333; cursor: pointer; width: fit-content;">
+          <span onClick="{{ toggleShabbat }}" style="{{ shabbatSwitchTrackStyle }}">
+            <span style="{{ shabbatSwitchKnobStyle }}"></span>
+          </span>
+          Shabbat
+        </label>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ isUpcomingTab }}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-direction: column;">
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 11 &middot; 5:30 PM EDT</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Rosh Hashanah</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Michael &amp; Monica Berg &middot; New York</div>
+          <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Register Now <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 11&ndash;13 &middot; Livestream</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Rosh Hashanah online</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Join online &middot; Pay what you can</div>
+          <div style="display: inline-flex; align-items: center; gap: 5px; background: #E8B04B; color: #111; border-radius: 999px; padding: 4px 10px 4px 8px; font-size: 12px; font-weight: 700; margin-top: 8px; white-space: nowrap;">&#10003; Included with your membership</div>
+          <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 4px;" style-hover="color:#a3001f">View livestream <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">Monday&ndash;Friday &middot; Live</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Daily Zohar Study</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Your daily deep dive into the Zohar.</div>
+          <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Register Now <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 13 &middot; 7:00 PM EDT</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Erev Rosh Hashanah Dinner</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Michael &amp; Monica Berg &middot; Los Angeles</div>
+          <div style="display: inline-flex; align-items: center; gap: 5px; background: #E8B04B; color: #111; border-radius: 999px; padding: 4px 10px 4px 8px; font-size: 12px; font-weight: 700; margin-top: 8px;">&#10003; Registered</div>
+        </div>
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 18 &middot; 6:00 PM EDT</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Yom Kippur Preparation</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Eitan Yardeni &middot; New York</div>
+          <div style="display: inline-flex; align-items: center; gap: 5px; background: #E8B04B; color: #111; border-radius: 999px; padding: 4px 10px 4px 8px; font-size: 12px; font-weight: 700; margin-top: 8px;">&#10003; Registered</div>
+        </div>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ isMyEventsTab }}" hint-placeholder-val="{{ false }}">
+      <div style="display: flex; flex-direction: column;">
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 11&ndash;13 &middot; Livestream</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Rosh Hashanah online</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Join online &middot; Pay what you can</div>
+          <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Open in event portal <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 13 &middot; 7:00 PM EDT</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Erev Rosh Hashanah Dinner</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Michael &amp; Monica Berg &middot; Los Angeles</div>
+          <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Open in event portal <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 18 &middot; 6:00 PM EDT</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Yom Kippur Preparation</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Eitan Yardeni &middot; New York</div>
+          <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Open in event portal <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+      </div>
+      </sc-if>
+
+      <a href="#" style="display: block; margin-top: 18px; padding-top: 16px; border-top: 1px solid #e2d5c2; font-size: 13px; font-weight: 700; color: #111;" style-hover="color:#E4002B">View all <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+
+    </div>
+
+  </div>
+  </div>
+
+  <div style="background: #f7efe6; border-radius: 14px; margin-top: 48px; padding: 48px; display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 48px; align-items: start;">
+    <div id="this-month" style="scroll-margin-top: 90px;">
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #E4002B; margin-bottom: 14px;">This Month &middot; Virgo</div>
+      <h2 style="margin: 0 0 16px; font-size: 42px; font-weight: 700; line-height: 1.1; color: #111;">Prepare for Rosh Hashanah.</h2>
+      <p style="margin: 0 0 22px; font-size: 17px; line-height: 1.5; color: #555; max-width: 560px;">Thirty days of spiritual preparation. Begin with the Virgo study guide, then explore this month's teachings.</p>
+      <a href="#" style="display: inline-block; font-size: 15px; font-weight: 700; color: #111; border-bottom: 2px solid #111; padding-bottom: 4px;" style-hover="color:#E4002B">Open the Virgo study guide <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+    </div>
+    <div>
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px;">
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700; color: #111;">Teachings for the month</h3>
+        <a href="#" style="font-size: 13px; font-weight: 700; color: #111;" style-hover="color:#E4002B">View all <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+      </div>
+      <div style="border-top: 1px solid #e2d5c2;"></div>
+      <a href="#" style="display: grid; grid-template-columns: 42px 1fr 20px; gap: 14px; padding: 16px 0; border-bottom: 1px solid #e2d5c2; align-items: center;" style-hover="opacity:0.7">
+        <span style="width: 42px; height: 42px; border: 1px solid #111; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px;">&#9654;</span>
+        <span>
+          <span style="display: block; font-size: 13px; color: #999;">Course</span>
+          <span style="display: block; font-size: 17px; font-weight: 700; color: #111;">The New Moon of Virgo</span>
+        </span>
+        <span style="font-size: 16px; color: #111;"><svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></span>
+      </a>
+      <a href="#" style="display: grid; grid-template-columns: 42px 1fr 20px; gap: 14px; padding: 16px 0; border-bottom: 1px solid #e2d5c2; align-items: center;" style-hover="opacity:0.7">
+        <span style="width: 42px; height: 42px; border: 1px solid #111; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px;">&#9654;</span>
+        <span>
+          <span style="display: block; font-size: 13px; color: #999;">Yehuda Yeshurun &middot; Lesson</span>
+          <span style="display: block; font-size: 17px; font-weight: 700; color: #111;">Choosing Me</span>
+        </span>
+        <span style="font-size: 16px; color: #111;"><svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></span>
+      </a>
+      <a href="#" style="display: grid; grid-template-columns: 42px 1fr 20px; gap: 14px; padding: 16px 0; align-items: center;" style-hover="opacity:0.7">
+        <span style="width: 42px; height: 42px; border: 1px solid #111; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px;">&#9654;</span>
+        <span>
+          <span style="display: block; font-size: 13px; color: #999;">Eitan Yardeni &middot; Lesson</span>
+          <span style="display: block; font-size: 17px; font-weight: 700; color: #111;">Re'eh: Choosing How We See</span>
+        </span>
+        <span style="font-size: 16px; color: #111;"><svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></span>
+      </a>
+    </div>
+  </div>
+
+  <div style="padding: 0 48px; margin-top: 48px;">
+    <h3 style="margin: 0 0 24px; font-size: 22px; font-weight: 700; color: #111;">Build your practice</h3>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px;">
+      <a href="#" style="display: flex; flex-direction: column; gap: 12px;" style-hover="opacity:0.85">
+        <div style="aspect-ratio: 4/3; border-radius: 8px; overflow: hidden; background: #ddd;">
+          <img src="uploads/pasted-1787669210883-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+        </div>
+        <div style="font-size: 12px; color: #999;">Daily study</div>
+        <div style="font-size: 17px; font-weight: 700; color: #111; line-height: 1.25;">Eitan's Daily Zohar</div>
+        <div style="font-size: 14px; color: #777;">A daily connection to the wisdom of the Zohar.</div>
+        <div style="font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 4px;">Join the year of study <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+      </a>
+      <a href="#" style="display: flex; flex-direction: column; gap: 12px;" style-hover="opacity:0.85">
+        <div style="aspect-ratio: 4/3; border-radius: 8px; overflow: hidden; background: #26262a;">
+          <img src="uploads/pasted-1787691563028-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; display: block;" />
+        </div>
+        <div style="font-size: 12px; color: #999;">Weekly wisdom</div>
+        <div style="font-size: 17px; font-weight: 700; color: #111; line-height: 1.25;">Secrets to Transform Your Week</div>
+        <div style="font-size: 14px; color: #777;">Teachings to bring into the week ahead.</div>
+        <div style="font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 4px;">Explore weekly wisdom <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+      </a>
+      <a href="#" style="display: flex; flex-direction: column; gap: 12px;" style-hover="opacity:0.85">
+        <div style="aspect-ratio: 4/3; border-radius: 8px; overflow: hidden; background: #d8d0c4;">
+          <img src="uploads/pasted-1787669210883-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.001;" />
+        </div>
+        <div style="font-size: 12px; color: #999;">Timeless teachings</div>
+        <div style="font-size: 17px; font-weight: 700; color: #111; line-height: 1.25;">Insights from Rav Berg</div>
+        <div style="font-size: 14px; color: #777;">Explore the wisdom of Rav Berg.</div>
+        <div style="font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 4px;">Explore the teachings <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+      </a>
+      <a href="#" style="display: flex; flex-direction: column; gap: 12px;" style-hover="opacity:0.85">
+        <div style="aspect-ratio: 4/3; border-radius: 8px; overflow: hidden;">
+          <img src="uploads/michael-monica-with-sh-logo.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+        </div>
+        <div style="font-size: 12px; color: #999;">Podcast</div>
+        <div style="font-size: 17px; font-weight: 700; color: #111; line-height: 1.25;">Spiritually Hungry</div>
+        <div style="font-size: 14px; color: #777;">Conversations with Monica and Michael Berg.</div>
+        <div style="font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 4px;">Listen to the podcast <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+      </a>
+      <a href="#" style="display: flex; flex-direction: column; gap: 12px;" style-hover="opacity:0.85">
+        <div style="aspect-ratio: 4/3; border-radius: 8px; overflow: hidden; background: #111;">
+          <img src="uploads/pasted-1787691563028-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; display: block; opacity: 0.7;" />
+        </div>
+        <div style="font-size: 12px; color: #999;">Watch on demand</div>
+        <div style="font-size: 17px; font-weight: 700; color: #111; line-height: 1.25;">Kabbalah Masterclass</div>
+        <div style="font-size: 14px; color: #777;">Go deeper with classes on Kabbalah.com.</div>
+        <div style="font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 4px;">Browse masterclasses <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+      </a>
+    </div>
+
+    <div style="height: 1px; background: #ddd; margin-top: 48px;"></div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 24px 0; flex-wrap: wrap; gap: 16px;">
+      <div style="font-size: 16px; font-weight: 600; color: #111;">Take your practice with you</div>
+      <div style="display: flex; align-items: center; gap: 32px;">
+        <a href="#" style="font-size: 15px; font-weight: 700; color: #111;" style-hover="color:#E4002B">Onehouse app <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        <a href="#" style="font-size: 15px; font-weight: 700; color: #111;" style-hover="color:#E4002B">Zohar app <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        <a href="#" style="font-size: 15px; font-weight: 700; color: #111;" style-hover="color:#E4002B">Kabbalistic Calendar <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 20px 24px; border: 1px solid #e6e6e6; border-radius: 10px;">
+      <div style="font-size: 16px; font-weight: 600; color: #111;">Get our newsletters</div>
+      <form style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <input type="text" placeholder="Full name" style="border: 1px solid #ccc; border-radius: 6px; padding: 10px 14px; font-size: 14px; width: 160px;" />
+        <select style="border: 1px solid #ccc; border-radius: 6px; padding: 10px 14px; font-size: 14px; color: #333; background: #fff;">
+          <option>Language</option>
+          <option>English</option>
+          <option>Hebrew</option>
+          <option>Spanish</option>
+        </select>
+        <input type="email" placeholder="Email address" style="border: 1px solid #ccc; border-radius: 6px; padding: 10px 14px; font-size: 14px; width: 220px;" />
+        <button style="background: #E4002B; color: #fff; border: none; border-radius: 6px; padding: 10px 22px; font-size: 14px; font-weight: 700; cursor: pointer;" style-hover="background:#b80022">I'm in!</button>
+        <a href="#" style="font-size: 13px; font-weight: 700; color: #111; margin-left: 4px;" style-hover="color:#E4002B">See all newsletters</a>
+      </form>
+    </div>
+  </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+<div style="background: #ececec; padding: 32px 0; display: flex; justify-content: center;">
+<div style="width: 390px; background: #fff; color: #111; font-family: Quicksand, Helvetica, sans-serif; box-shadow: 0 8px 30px rgba(0,0,0,0.15);">
+
+  <!-- HERO -->
+  <div style="position: relative; background: #0a0a0a;">
+    <div style="padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: inline-flex; align-items: center; background: rgba(232,176,75,0.15); border: 1px solid rgba(232,176,75,0.4); border-radius: 999px; padding: 6px 13px; width: fit-content; font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #E8B04B;">Live Community Gathering</div>
+      <h1 style="margin: 0; font-size: 28px; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; color: #fff;">The Desire Code: How to Create More of What You Want</h1>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; overflow: hidden; background: #26262a; border: 1.5px solid rgba(255,255,255,0.35); flex: none;">
+            <img src="uploads/daniel_naor2-380x380.jpg" alt="Daniel Naor" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block;" />
+          </div>
+          <div style="font-size: 14px; font-weight: 700; color: #fff;">Daniel Naor</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 8px;">
+        <span style="font-size: 18px; font-weight: 700; color: #fff;">Mon, Sept 1</span>
+        <span style="font-size: 14px; font-weight: 600; color: #d8d8dc;">7:00pm PT</span>
+      </div>
+      <div style="display: flex; gap: 6px;">
+        <div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.18); border-radius: 5px; padding: 5px 8px; text-align: center; flex: 1;">
+          <div style="font-size: 14px; font-weight: 700; color: #fff; line-height: 1;">07</div>
+          <div style="font-size: 8px; font-weight: 700; letter-spacing: 0.08em; color: #9a9aa0; margin-top: 2px;">DAYS</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.18); border-radius: 5px; padding: 5px 8px; text-align: center; flex: 1;">
+          <div style="font-size: 14px; font-weight: 700; color: #fff; line-height: 1;">09</div>
+          <div style="font-size: 8px; font-weight: 700; letter-spacing: 0.08em; color: #9a9aa0; margin-top: 2px;">HRS</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.18); border-radius: 5px; padding: 5px 8px; text-align: center; flex: 1;">
+          <div style="font-size: 14px; font-weight: 700; color: #fff; line-height: 1;">09</div>
+          <div style="font-size: 8px; font-weight: 700; letter-spacing: 0.08em; color: #9a9aa0; margin-top: 2px;">MIN</div>
+        </div>
+        <div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.18); border-radius: 5px; padding: 5px 8px; text-align: center; flex: 1;">
+          <div style="font-size: 14px; font-weight: 700; color: #fff; line-height: 1;">28</div>
+          <div style="font-size: 8px; font-weight: 700; letter-spacing: 0.08em; color: #9a9aa0; margin-top: 2px;">SEC</div>
+        </div>
+      </div>
+      <a href="#" style="display: block; text-align: center; background: #E4002B; color: #fff; padding: 14px; border-radius: 4px; font-size: 16px; font-weight: 700;" style-hover="background:#b80022">Register Now</a>
+    </div>
+  </div>
+
+  <div style="padding: 0 0 24px;">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px 18px; background: #f7efe6; border-bottom: 1px solid #e6dccd;">
+      <div style="font-size: 16px; font-weight: 700; color: #111; flex: 1;">Your Onehouse</div>
+      <a href="#" style="display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 8px 14px; font-size: 13px; font-weight: 700; color: #111;" style-hover="borderColor:#111">My library <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+    </div>
+
+    <div style="padding: 20px 18px 0;">
+      <h2 style="margin: 0 0 4px; font-size: 24px; font-weight: 700; color: #111;">This week at Onehouse</h2>
+      <div style="font-size: 13px; color: #999; margin-bottom: 20px;">Wisdom. Practice. Community.</div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="position: relative; aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.10);">
+          <img src="uploads/michael-monica-with-sh-logo.jpg" alt="Spiritually Hungry with Michael &amp; Monica Berg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #999;">Featured Podcast &middot; Ep. 248</div>
+          <h3 style="margin: 6px 0 0; font-size: 22px; font-weight: 700; line-height: 1.15; color: #111;">Love as a Practice</h3>
+          <div style="font-size: 15px; color: #555; margin-top: 4px;">Expanding the Boundaries of Who We Are</div>
+          <div style="font-size: 13px; color: #888; margin-top: 10px;">Spiritually Hungry with Monica &amp; Michael Berg</div>
+          <a href="#" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #E4002B; margin-top: 12px;" style-hover="color:#a3001f">Listen to the episode <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+      </div>
+
+      <div style="margin-top: 32px;" id="latest">
+        <h3 style="margin: 0 0 12px; font-size: 18px; font-weight: 700; color: #111;">This week's featured teachings</h3>
+        <div style="border-top: 1.5px solid #111;"></div>
+        <a href="#" style="display: grid; grid-template-columns: 76px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid #e6e6e6;" style-hover="background:#f7f7f7">
+          <div style="position: relative; aspect-ratio: 8/5; border-radius: 6px; overflow: hidden; background: #26262a;">
+            <img src="uploads/pasted-1787669210883-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div>
+            <div style="font-size: 12px; color: #999; margin-bottom: 3px;">Michael Berg &middot; From the archive</div>
+            <div style="font-size: 15px; font-weight: 700; color: #111; line-height: 1.25;">This week's Torah portion lecture</div>
+            <div style="font-size: 12px; font-weight: 700; color: #E4002B; margin-top: 5px;">Teaching preview <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+          </div>
+        </a>
+        <a href="#" style="display: grid; grid-template-columns: 76px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid #e6e6e6;" style-hover="background:#f7f7f7">
+          <div style="position: relative; aspect-ratio: 8/5; border-radius: 6px; overflow: hidden; background: #26262a;">
+            <img src="uploads/pasted-1787669210883-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div>
+            <div style="font-size: 12px; color: #999; margin-bottom: 3px;">Michael Berg &middot; Latest lecture</div>
+            <div style="font-size: 15px; font-weight: 700; color: #111; line-height: 1.25;">Michael's latest teaching</div>
+            <div style="font-size: 12px; font-weight: 700; color: #E4002B; margin-top: 5px;">Teaching preview <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+          </div>
+        </a>
+        <a href="#" style="display: grid; grid-template-columns: 76px 1fr; gap: 14px; padding: 14px 0;" style-hover="background:#f7f7f7">
+          <div style="position: relative; aspect-ratio: 8/5; border-radius: 6px; overflow: hidden;">
+            <img src="uploads/michael-monica-with-sh-logo.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div>
+            <div style="font-size: 12px; color: #999; margin-bottom: 3px;">Spiritually Hungry &middot; Episode 248</div>
+            <div style="font-size: 15px; font-weight: 700; color: #111; line-height: 1.25;">Love as a Practice</div>
+            <div style="font-size: 12px; font-weight: 700; color: #E4002B; margin-top: 5px;">Listen to the episode <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+          </div>
+        </a>
+      </div>
+
+      <div id="live-events" style="background: #f7efe6; border-top: 2px solid #E8B04B; border-radius: 14px; padding: 20px; margin-top: 32px; scroll-margin-top: 90px;">
+        <h3 style="margin: 0 0 14px; font-size: 18px; font-weight: 700; color: #111;">Live events</h3>
+        <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+          <button onClick="{{ setUpcomingTab }}" style="{{ upcomingTabStyle }}">Upcoming events</button>
+          <button onClick="{{ setMyEventsTab }}" style="{{ myEventsTabStyle }}">My events</button>
+        </div>
+
+        <sc-if value="{{ isUpcomingTab }}" hint-placeholder-val="{{ true }}">
+        <div style="background: #fff; border: 1px solid #e2d5c2; border-radius: 10px; padding: 12px 14px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #999;">Filter events</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+            <select style="background: #fff; border: 1px solid #ccc; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 600; color: #333;">
+              <option>Language</option>
+              <option>English</option>
+              <option>Hebrew</option>
+              <option>Spanish</option>
+            </select>
+            <div style="position: relative;">
+              <button onClick="{{ toggleLocationOpen }}" style="{{ locationButtonStyle }}">{{ locationButtonLabel }} &#9662;</button>
+              <sc-if value="{{ locationOpen }}" hint-placeholder-val="{{ false }}">
+              <div style="position: absolute; top: calc(100% + 6px); left: 0; z-index: 20; width: 240px; background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); overflow: hidden;">
+                <div style="padding: 8px; border-bottom: 1px solid #eee;">
+                  <input type="text" value="{{ locationSearch }}" onChange="{{ setLocationSearch }}" placeholder="Search centres…" style="width: 100%; box-sizing: border-box; border: 1px solid #ddd; border-radius: 6px; padding: 7px 10px; font-size: 13px;" />
+                </div>
+                <div style="max-height: 220px; overflow-y: auto; padding: 4px 0;">
+                  <sc-for list="{{ filteredCentres }}" as="c" hint-placeholder-count="6">
+                    <label style="display: flex; align-items: center; gap: 8px; padding: 8px 12px; font-size: 13px; color: #333; cursor: pointer;" style-hover="background:#f7f7f7">
+                      <input type="checkbox" checked="{{ c.selected }}" onChange="{{ c.toggle }}" />
+                      {{ c.name }}
+                    </label>
+                  </sc-for>
+                </div>
+              </div>
+              </sc-if>
+            </div>
+            <div style="width: 1px; height: 20px; background: #e2d5c2;"></div>
+            <div style="display: inline-flex; border: 1px solid #ccc; border-radius: 999px; overflow: hidden;">
+              <button onClick="{{ setAllFormat }}" style="{{ allFormatStyle }}">All</button>
+              <button onClick="{{ setLiveFormat }}" style="{{ liveFormatStyle }}">Online</button>
+              <button onClick="{{ setInPersonFormat }}" style="{{ inPersonFormatStyle }}">In-person</button>
+            </div>
+          </div>
+          <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: #333; cursor: pointer; width: fit-content;">
+            <span onClick="{{ toggleShabbat }}" style="{{ shabbatSwitchTrackStyle }}">
+              <span style="{{ shabbatSwitchKnobStyle }}"></span>
+            </span>
+            Shabbat
+          </label>
+        </div>
+        </sc-if>
+
+        <sc-if value="{{ isUpcomingTab }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-direction: column;">
+          <div style="padding: 12px 0; border-top: 1px solid #e2d5c2;">
+            <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 11 &middot; 5:30 PM EDT</div>
+            <div style="font-size: 16px; font-weight: 700; color: #111;">Rosh Hashanah</div>
+            <div style="font-size: 13px; color: #777; margin-top: 2px;">Michael &amp; Monica Berg &middot; New York</div>
+            <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Register Now <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+          </div>
+          <div style="padding: 12px 0; border-top: 1px solid #e2d5c2;">
+            <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 11&ndash;13 &middot; Livestream</div>
+            <div style="font-size: 16px; font-weight: 700; color: #111;">Rosh Hashanah online</div>
+            <div style="font-size: 13px; color: #777; margin-top: 2px;">Join online &middot; Pay what you can</div>
+            <div style="display: inline-flex; align-items: center; gap: 5px; background: #E8B04B; color: #111; border-radius: 999px; padding: 4px 10px 4px 8px; font-size: 12px; font-weight: 700; margin-top: 8px; white-space: nowrap;">&#10003; Included with your membership</div>
+            <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 6px;" style-hover="color:#a3001f">View livestream <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+          </div>
+          <div style="padding: 12px 0; border-top: 1px solid #e2d5c2;">
+            <div style="font-size: 12px; color: #999; margin-bottom: 4px;">Monday&ndash;Friday &middot; Live</div>
+            <div style="font-size: 16px; font-weight: 700; color: #111;">Daily Zohar Study</div>
+            <div style="font-size: 13px; color: #777; margin-top: 2px;">Your daily deep dive into the Zohar.</div>
+            <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Register Now <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+          </div>
+          <div style="padding: 12px 0; border-top: 1px solid #e2d5c2;">
+            <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 13 &middot; 7:00 PM EDT</div>
+            <div style="font-size: 16px; font-weight: 700; color: #111;">Erev Rosh Hashanah Dinner</div>
+            <div style="font-size: 13px; color: #777; margin-top: 2px;">Michael &amp; Monica Berg &middot; Los Angeles</div>
+            <div style="display: inline-flex; align-items: center; gap: 5px; background: #E8B04B; color: #111; border-radius: 999px; padding: 4px 10px 4px 8px; font-size: 12px; font-weight: 700; margin-top: 8px;">&#10003; Registered</div>
+          </div>
+          <div style="padding: 12px 0; border-top: 1px solid #e2d5c2;">
+            <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 18 &middot; 6:00 PM EDT</div>
+            <div style="font-size: 16px; font-weight: 700; color: #111;">Yom Kippur Preparation</div>
+            <div style="font-size: 13px; color: #777; margin-top: 2px;">Eitan Yardeni &middot; New York</div>
+            <div style="display: inline-flex; align-items: center; gap: 5px; background: #E8B04B; color: #111; border-radius: 999px; padding: 4px 10px 4px 8px; font-size: 12px; font-weight: 700; margin-top: 8px;">&#10003; Registered</div>
+          </div>
+        </div>
+        </sc-if>
+
+        <sc-if value="{{ isMyEventsTab }}" hint-placeholder-val="{{ false }}">
+        <div style="display: flex; flex-direction: column;">
+          <div style="padding: 12px 0; border-top: 1px solid #e2d5c2;">
+            <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 11&ndash;13 &middot; Livestream</div>
+            <div style="font-size: 16px; font-weight: 700; color: #111;">Rosh Hashanah online</div>
+            <div style="font-size: 13px; color: #777; margin-top: 2px;">Join online &middot; Pay what you can</div>
+            <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Open in event portal <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+          </div>
+          <div style="padding: 12px 0; border-top: 1px solid #e2d5c2;">
+            <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 13 &middot; 7:00 PM EDT</div>
+            <div style="font-size: 16px; font-weight: 700; color: #111;">Erev Rosh Hashanah Dinner</div>
+            <div style="font-size: 13px; color: #777; margin-top: 2px;">Michael &amp; Monica Berg &middot; Los Angeles</div>
+            <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Open in event portal <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+          </div>
+          <div style="padding: 12px 0; border-top: 1px solid #e2d5c2;">
+            <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 18 &middot; 6:00 PM EDT</div>
+            <div style="font-size: 16px; font-weight: 700; color: #111;">Yom Kippur Preparation</div>
+            <div style="font-size: 13px; color: #777; margin-top: 2px;">Eitan Yardeni &middot; New York</div>
+            <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Open in event portal <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+          </div>
+        </div>
+        </sc-if>
+
+        <a href="#" style="display: block; margin-top: 16px; padding-top: 14px; border-top: 1px solid #e2d5c2; font-size: 13px; font-weight: 700; color: #111;" style-hover="color:#E4002B">View all <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+      </div>
+    </div>
+
+    <div id="this-month" style="background: #f7efe6; border-radius: 14px; margin-top: 32px; padding: 24px 18px; scroll-margin-top: 90px;">
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #E4002B; margin-bottom: 12px;">This Month &middot; Virgo</div>
+      <h2 style="margin: 0 0 12px; font-size: 26px; font-weight: 700; line-height: 1.15; color: #111;">Prepare for Rosh Hashanah.</h2>
+      <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.5; color: #555;">Thirty days of spiritual preparation. Begin with the Virgo study guide, then explore this month's teachings.</p>
+      <a href="#" style="display: inline-block; font-size: 14px; font-weight: 700; color: #111; border-bottom: 2px solid #111; padding-bottom: 3px; margin-bottom: 24px;" style-hover="color:#E4002B">Open the Virgo study guide <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+
+      <h3 style="margin: 0 0 10px; font-size: 17px; font-weight: 700; color: #111;">Teachings for the month</h3>
+      <div style="border-top: 1px solid #e2d5c2;"></div>
+      <a href="#" style="display: grid; grid-template-columns: 38px 1fr 18px; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e2d5c2; align-items: center;" style-hover="opacity:0.7">
+        <span style="width: 38px; height: 38px; border: 1px solid #111; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px;">&#9654;</span>
+        <span>
+          <span style="display: block; font-size: 12px; color: #999;">Course</span>
+          <span style="display: block; font-size: 15px; font-weight: 700; color: #111;">The New Moon of Virgo</span>
+        </span>
+        <span style="font-size: 14px; color: #111;"><svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></span>
+      </a>
+      <a href="#" style="display: grid; grid-template-columns: 38px 1fr 18px; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e2d5c2; align-items: center;" style-hover="opacity:0.7">
+        <span style="width: 38px; height: 38px; border: 1px solid #111; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px;">&#9654;</span>
+        <span>
+          <span style="display: block; font-size: 12px; color: #999;">Yehuda Yeshurun &middot; Lesson</span>
+          <span style="display: block; font-size: 15px; font-weight: 700; color: #111;">Choosing Me</span>
+        </span>
+        <span style="font-size: 14px; color: #111;"><svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></span>
+      </a>
+      <a href="#" style="display: grid; grid-template-columns: 38px 1fr 18px; gap: 12px; padding: 14px 0; align-items: center;" style-hover="opacity:0.7">
+        <span style="width: 38px; height: 38px; border: 1px solid #111; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px;">&#9654;</span>
+        <span>
+          <span style="display: block; font-size: 12px; color: #999;">Eitan Yardeni &middot; Lesson</span>
+          <span style="display: block; font-size: 15px; font-weight: 700; color: #111;">Re'eh: Choosing How We See</span>
+        </span>
+        <span style="font-size: 14px; color: #111;"><svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></span>
+      </a>
+    </div>
+
+    <div style="padding: 24px 18px 0;">
+      <h3 style="margin: 0 0 18px; font-size: 18px; font-weight: 700; color: #111;">Build your practice</h3>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <a href="#" style="display: flex; flex-direction: column; gap: 8px;" style-hover="opacity:0.85">
+          <div style="aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; background: #ddd;">
+            <img src="uploads/pasted-1787669210883-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div style="font-size: 11px; color: #999;">Daily study</div>
+          <div style="font-size: 15px; font-weight: 700; color: #111; line-height: 1.25;">Eitan's Daily Zohar</div>
+          <div style="font-size: 13px; color: #777;">A daily connection to the wisdom of the Zohar.</div>
+          <div style="font-size: 12px; font-weight: 700; color: #E4002B;">Join the year of study <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+        </a>
+        <a href="#" style="display: flex; flex-direction: column; gap: 8px;" style-hover="opacity:0.85">
+          <div style="aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; background: #26262a;">
+            <img src="uploads/pasted-1787691563028-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; display: block;" />
+          </div>
+          <div style="font-size: 11px; color: #999;">Weekly wisdom</div>
+          <div style="font-size: 15px; font-weight: 700; color: #111; line-height: 1.25;">Secrets to Transform Your Week</div>
+          <div style="font-size: 13px; color: #777;">Teachings to bring into the week ahead.</div>
+          <div style="font-size: 12px; font-weight: 700; color: #E4002B;">Explore weekly wisdom <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+        </a>
+        <a href="#" style="display: flex; flex-direction: column; gap: 8px;" style-hover="opacity:0.85">
+          <div style="aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; background: #d8d0c4;">
+            <img src="uploads/pasted-1787669210883-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.001;" />
+          </div>
+          <div style="font-size: 11px; color: #999;">Timeless teachings</div>
+          <div style="font-size: 15px; font-weight: 700; color: #111; line-height: 1.25;">Insights from Rav Berg</div>
+          <div style="font-size: 13px; color: #777;">Explore the wisdom of Rav Berg.</div>
+          <div style="font-size: 12px; font-weight: 700; color: #E4002B;">Explore the teachings <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+        </a>
+        <a href="#" style="display: flex; flex-direction: column; gap: 8px;" style-hover="opacity:0.85">
+          <div style="aspect-ratio: 16/9; border-radius: 8px; overflow: hidden;">
+            <img src="uploads/michael-monica-with-sh-logo.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div style="font-size: 11px; color: #999;">Podcast</div>
+          <div style="font-size: 15px; font-weight: 700; color: #111; line-height: 1.25;">Spiritually Hungry</div>
+          <div style="font-size: 13px; color: #777;">Conversations with Monica and Michael Berg.</div>
+          <div style="font-size: 12px; font-weight: 700; color: #E4002B;">Listen to the podcast <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+        </a>
+        <a href="#" style="display: flex; flex-direction: column; gap: 8px;" style-hover="opacity:0.85">
+          <div style="aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; background: #111;">
+            <img src="uploads/pasted-1787691563028-0.png" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; display: block; opacity: 0.7;" />
+          </div>
+          <div style="font-size: 11px; color: #999;">Watch on demand</div>
+          <div style="font-size: 15px; font-weight: 700; color: #111; line-height: 1.25;">Kabbalah Masterclass</div>
+          <div style="font-size: 13px; color: #777;">Go deeper with classes on Kabbalah.com.</div>
+          <div style="font-size: 12px; font-weight: 700; color: #E4002B;">Browse masterclasses <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></div>
+        </a>
+      </div>
+
+      <div style="height: 1px; background: #ddd; margin-top: 28px;"></div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 0;">
+        <div style="font-size: 15px; font-weight: 600; color: #111;">Take your practice with you</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="#" style="font-size: 14px; font-weight: 700; color: #111;" style-hover="color:#E4002B">Onehouse app <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+          <a href="#" style="font-size: 14px; font-weight: 700; color: #111;" style-hover="color:#E4002B">Zohar app <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+          <a href="#" style="font-size: 14px; font-weight: 700; color: #111;" style-hover="color:#E4002B">Kabbalistic Calendar <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 16px; border: 1px solid #e6e6e6; border-radius: 10px;">
+        <div style="font-size: 15px; font-weight: 600; color: #111;">Get our newsletters</div>
+        <form style="display: flex; flex-direction: column; gap: 10px;">
+          <input type="text" placeholder="Full name" style="border: 1px solid #ccc; border-radius: 6px; padding: 12px 14px; font-size: 14px; width: 100%; box-sizing: border-box;" />
+          <select style="border: 1px solid #ccc; border-radius: 6px; padding: 12px 14px; font-size: 14px; color: #333; background: #fff; width: 100%; box-sizing: border-box;">
+            <option>Language</option>
+            <option>English</option>
+            <option>Hebrew</option>
+            <option>Spanish</option>
+          </select>
+          <input type="email" placeholder="Email address" style="border: 1px solid #ccc; border-radius: 6px; padding: 12px 14px; font-size: 14px; width: 100%; box-sizing: border-box;" />
+          <button style="background: #E4002B; color: #fff; border: none; border-radius: 6px; padding: 12px; font-size: 14px; font-weight: 700; cursor: pointer;" style-hover="background:#b80022">I'm in!</button>
+          <a href="#" style="text-align: center; font-size: 13px; font-weight: 700; color: #111;" style-hover="color:#E4002B">See all newsletters</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showThumbnailRow&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Left column&quot;}}">
+class Component extends DCLogic {
+  state = { view: 'desktop', eventsTab: 'upcoming', shabbatOnly: false, eventFormat: 'all', locations: [], locationOpen: false, locationSearch: '' };
+  ALL_CENTRES = ['New York', 'Los Angeles', 'Miami', 'Boca Raton', 'San Diego', 'San Francisco', 'Boston', 'Chicago', 'Dallas', 'Houston', 'Atlanta', 'Toronto', 'Vancouver', 'Montreal', 'Mexico City', 'London', 'Paris', 'Tel Aviv', 'Jerusalem', 'Sao Paulo', 'Buenos Aires', 'Madrid', 'Barcelona', 'Milan', 'Rome', 'Amsterdam', 'Zurich', 'Vienna', 'Berlin', 'Moscow', 'Kiev', 'Warsaw', 'Sydney', 'Melbourne', 'Johannesburg', 'Cape Town', 'Hong Kong', 'Singapore', 'Tokyo', 'Seoul', 'Mumbai', 'Dubai', 'Istanbul', 'Athens', 'Lisbon', 'Bogota', 'Lima', 'Santiago', 'Panama City', 'Online'];
+  componentDidMount() {
+    this._onClick = (e) => {
+      const a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a) return;
+      const id = a.getAttribute('href').slice(1);
+      if (!id) return;
+      const el = document.getElementById(id);
+      if (!el) return;
+      e.preventDefault();
+      let n = el.parentElement, scroller = null;
+      while (n && n !== document.body) {
+        const oy = getComputedStyle(n).overflowY;
+        if ((oy === 'auto' || oy === 'scroll') && n.scrollHeight > n.clientHeight + 4) { scroller = n; break; }
+        n = n.parentElement;
+      }
+      const top = el.getBoundingClientRect().top;
+      if (scroller) {
+        scroller.scrollTo({ top: scroller.scrollTop + top - 24, behavior: 'smooth' });
+      } else {
+        const y = window.scrollY + top - 24;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        if (window.parent && window.parent !== window) {
+          try { window.parent.postMessage({ type: 'scrollTo', y }, '*'); } catch (_) {}
+        }
+      }
+    };
+    document.addEventListener('click', this._onClick);
+  }
+  componentWillUnmount() { document.removeEventListener('click', this._onClick); }
+  renderVals() {
+    return {
+      showThumbnailRow: this.props.showThumbnailRow ?? true,
+      isDesktop: this.state.view === 'desktop',
+      isMobile: this.state.view === 'mobile',
+      setDesktop: () => this.setState({ view: 'desktop' }),
+      setMobile: () => this.setState({ view: 'mobile' }),
+      isUpcomingTab: this.state.eventsTab === 'upcoming',
+      isMyEventsTab: this.state.eventsTab === 'my',
+      setUpcomingTab: () => this.setState({ eventsTab: 'upcoming' }),
+      setMyEventsTab: () => this.setState({ eventsTab: 'my' }),
+      upcomingTabStyle: this.state.eventsTab === 'upcoming'
+        ? 'background:#111;color:#fff;border:1px solid #111;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;'
+        : 'background:transparent;color:#555;border:1px solid #ccc;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;',
+      myEventsTabStyle: this.state.eventsTab === 'my'
+        ? 'background:#111;color:#fff;border:1px solid #111;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;'
+        : 'background:transparent;color:#555;border:1px solid #ccc;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;',
+      shabbatOnly: this.state.shabbatOnly,
+      toggleShabbat: () => this.setState(s => ({ shabbatOnly: !s.shabbatOnly })),
+      shabbatSwitchTrackStyle: 'position:relative;display:inline-block;width:34px;height:20px;border-radius:999px;flex:none;transition:background 0.15s;background:' + (this.state.shabbatOnly ? '#111' : '#ccc') + ';',
+      shabbatSwitchKnobStyle: 'position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.3);transition:transform 0.15s;transform:translateX(' + (this.state.shabbatOnly ? '14px' : '0') + ');',
+      setAllFormat: () => this.setState({ eventFormat: 'all' }),
+      setLiveFormat: () => this.setState({ eventFormat: 'live' }),
+      setInPersonFormat: () => this.setState({ eventFormat: 'in-person' }),
+      allFormatStyle: this.state.eventFormat === 'all'
+        ? 'background:#111;color:#fff;border:none;border-right:1px solid #111;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;'
+        : 'background:#fff;color:#555;border:none;border-right:1px solid #ccc;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;',
+      liveFormatStyle: this.state.eventFormat === 'live'
+        ? 'background:#111;color:#fff;border:none;border-right:1px solid #111;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;'
+        : 'background:#fff;color:#555;border:none;border-right:1px solid #ccc;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;',
+      inPersonFormatStyle: this.state.eventFormat === 'in-person'
+        ? 'background:#111;color:#fff;border:none;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;'
+        : 'background:#fff;color:#555;border:none;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;',
+      locationOpen: this.state.locationOpen,
+      toggleLocationOpen: () => this.setState(s => ({ locationOpen: !s.locationOpen })),
+      locationSearch: this.state.locationSearch,
+      setLocationSearch: (e) => this.setState({ locationSearch: e.target.value }),
+      locationButtonLabel: this.state.locations.length ? this.state.locations.length + ' selected' : 'Location',
+      locationButtonStyle: this.state.locations.length
+        ? 'display:inline-flex;align-items:center;gap:6px;background:#111;color:#fff;border:1px solid #111;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;'
+        : 'display:inline-flex;align-items:center;gap:6px;background:#fff;color:#555;border:1px solid #ccc;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;',
+      filteredCentres: this.ALL_CENTRES
+        .filter(name => name.toLowerCase().includes(this.state.locationSearch.toLowerCase()))
+        .map(name => ({
+          name,
+          selected: this.state.locations.includes(name),
+          toggle: () => this.setState(s => ({
+            locations: s.locations.includes(name) ? s.locations.filter(l => l !== name) : [...s.locations, name]
+          }))
+        })),
+      desktopBtnStyle: this.state.view === 'desktop'
+        ? 'background:#111;color:#fff;padding:8px 16px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;'
+        : 'background:transparent;color:#111;padding:8px 16px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;',
+      mobileBtnStyle: this.state.view === 'mobile'
+        ? 'background:#111;color:#fff;padding:8px 16px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;'
+        : 'background:transparent;color:#111;padding:8px 16px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;',
+    };
+  }
+}
+</script>
+</body>
+</html>
