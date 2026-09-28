@@ -110,7 +110,7 @@
     <div style="font-size: 14px; color: #999; letter-spacing: 0.02em;">Wisdom. Practice. Community.</div>
   </div>
 
-  <div style="display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 48px; align-items: start;">
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 48px; align-items: stretch;">
 
     <div>
       <div style="display: grid; grid-template-columns: 260px 1fr; gap: 30px; align-items: start;">
@@ -185,33 +185,29 @@
       </div>
     </div>
 
-    <div id="live-events" style="background: #f7efe6; border-top: 2px solid #E8B04B; border-radius: 14px; padding: 26px; scroll-margin-top: 90px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+    <div style="position: relative; min-height: 560px;">
+    <div id="live-events" style="position: absolute; inset: 0; background: #f7efe6; border-top: 2px solid #E8B04B; border-radius: 14px; padding: 26px; scroll-margin-top: 90px; box-sizing: border-box; display: flex; flex-direction: column;">
       <div style="margin-bottom: 18px;">
         <h3 style="margin: 0 0 6px; font-size: 22px; font-weight: 700; color: #111;">Upcoming events</h3>
         <div style="font-size: 14px; color: #777; line-height: 1.4;">All upcoming events on our site. Filter to find what's right for you.</div>
       </div>
 
-      <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+      <div style="display: flex; gap: 24px; margin-bottom: 18px; border-bottom: 1px solid #e2d5c2;">
         <button onClick="{{ setUpcomingTab }}" style="{{ upcomingTabStyle }}">All events</button>
         <button onClick="{{ setMyEventsTab }}" style="{{ myEventsTabStyle }}">My registrations</button>
       </div>
 
       <sc-if value="{{ isUpcomingTab }}" hint-placeholder-val="{{ true }}">
       <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px;">
-        <div style="display: flex; gap: 8px; width: fit-content;">
-          <button onClick="{{ setAllFormat }}" style="{{ allFormatStyle }}">All</button>
-          <button onClick="{{ setLiveFormat }}" style="{{ liveFormatStyle }}">Online</button>
-          <button onClick="{{ setInPersonFormat }}" style="{{ inPersonFormatStyle }}">In-person</button>
-        </div>
         <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-        <select style="background: #fff; border: 1px solid #ccc; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 600; color: #333;">
+        <div style="position: relative; display: inline-flex; align-items: center; color: #555;"><select style="appearance: none; -webkit-appearance: none; background: #fff; border: 1px solid #ccc; border-radius: 999px; padding: 7px 32px 7px 14px; font-family: inherit; font-size: 13px; font-weight: 700; color: #555; cursor: pointer;">
           <option>Language</option>
           <option>English</option>
           <option>Hebrew</option>
           <option>Spanish</option>
-        </select>
+        </select><span style="position: absolute; right: 13px; pointer-events: none;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" style="display:block;flex:none"><path d="M2 3.5l3 3 3-3"/></svg></span></div>
 <div style="position: relative;">
-          <button onClick="{{ toggleLocationOpen }}" style="{{ locationButtonStyle }}">{{ locationButtonLabel }} &#9662;</button>
+          <button onClick="{{ toggleLocationOpen }}" style="{{ locationButtonStyle }}">{{ locationButtonLabel }} <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" style="display:block;flex:none"><path d="M2 3.5l3 3 3-3"/></svg></button>
           <sc-if value="{{ locationOpen }}" hint-placeholder-val="{{ false }}">
           <div style="position: absolute; top: calc(100% + 6px); left: 0; z-index: 20; width: 240px; background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); overflow: hidden;">
             <div style="padding: 8px; border-bottom: 1px solid #eee;">
@@ -235,9 +231,16 @@
           Shabbat
         </label>
         </div>
+        <div style="display: flex; gap: 8px; width: fit-content;">
+          <button onClick="{{ setAllFormat }}" style="{{ allFormatStyle }}">All</button>
+          <button onClick="{{ setLiveFormat }}" style="{{ liveFormatStyle }}">Online</button>
+          <button onClick="{{ setInPersonFormat }}" style="{{ inPersonFormatStyle }}">In-person</button>
+        </div>
       </div>
       </sc-if>
 
+      <div style="position: relative; flex: 1; min-height: 0;">
+      <div ref="{{ listRef }}" style="{{ listScrollStyle }}">
       <sc-if value="{{ isUpcomingTab }}" hint-placeholder-val="{{ true }}">
       <div style="display: flex; flex-direction: column;">
         <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
@@ -271,6 +274,24 @@
           <div style="font-size: 13px; color: #777; margin-top: 2px;">Eitan Yardeni &middot; New York</div>
           <div style="display: inline-flex; align-items: center; gap: 5px; background: #E8B04B; color: #111; border-radius: 999px; padding: 4px 10px 4px 8px; font-size: 12px; font-weight: 700; margin-top: 8px;">&#10003; Registered</div>
         </div>
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 29</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Prayer of the Kabbalist: The Ana BeKo&#39;ach</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Rachel Yardeni &middot; Kabbalah Centre New York</div>
+          <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">View livestream <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 29</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">The Writings of the Ari</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Yosef Grundman &middot; Kabbalah Centre New York</div>
+          <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">View livestream <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
+        <div style="padding: 14px 0; border-top: 1px solid #e2d5c2;">
+          <div style="font-size: 12px; color: #999; margin-bottom: 4px;">September 29</div>
+          <div style="font-size: 17px; font-weight: 700; color: #111;">Kabbalistic Meditation: Connecting with Our Personal Guardian Angel</div>
+          <div style="font-size: 13px; color: #777; margin-top: 2px;">Rachel Yardeni &middot; Kabbalah Centre New York</div>
+          <a href="#" style="display: block; font-size: 13px; font-weight: 700; color: #E4002B; margin-top: 8px;" style-hover="color:#a3001f">Register Now <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+        </div>
       </div>
       </sc-if>
 
@@ -296,9 +317,15 @@
         </div>
       </div>
       </sc-if>
+      </div>
+      <sc-if value="{{ isScrollMode }}" hint-placeholder-val="{{ false }}">
+        <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 56px; background: linear-gradient(rgba(247,239,230,0), #f7efe6); pointer-events: none;"></div>
+      </sc-if>
+      </div>
 
-      <a href="#" style="display: block; margin-top: 18px; padding-top: 16px; border-top: 1px solid #e2d5c2; font-size: 13px; font-weight: 700; color: #111;" style-hover="color:#E4002B">View all <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
+      <a href="#" style="display: flex; align-items: center; gap: 6px; flex: none; margin-top: 12px; padding-top: 16px; border-top: 1px solid #e2d5c2; font-size: 13px; font-weight: 700; color: #111;" style-hover="color:#E4002B">View all<sc-if value="{{ hasMore }}" hint-placeholder-val="{{ false }}"><span style="font-weight: 600; color: #777;">&middot; {{ moreCount }} more</span></sc-if> <svg width="10" height="10" viewBox="0 0 10 10" style="display:inline-block;vertical-align:-1px" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8L8 2M3.2 2H8v4.8"/></svg></a>
 
+    </div>
     </div>
 
   </div>
@@ -547,27 +574,22 @@
           <div style="font-size: 13px; color: #777; line-height: 1.4;">All upcoming events on our site. Filter to find what's right for you.</div>
         </div>
 
-        <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <div style="display: flex; gap: 22px; margin-bottom: 14px; border-bottom: 1px solid #e2d5c2;">
           <button onClick="{{ setUpcomingTab }}" style="{{ upcomingTabStyle }}">All events</button>
           <button onClick="{{ setMyEventsTab }}" style="{{ myEventsTabStyle }}">My registrations</button>
         </div>
 
         <sc-if value="{{ isUpcomingTab }}" hint-placeholder-val="{{ true }}">
         <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px;">
-          <div style="display: flex; gap: 8px; width: fit-content;">
-            <button onClick="{{ setAllFormat }}" style="{{ allFormatStyle }}">All</button>
-            <button onClick="{{ setLiveFormat }}" style="{{ liveFormatStyle }}">Online</button>
-            <button onClick="{{ setInPersonFormat }}" style="{{ inPersonFormatStyle }}">In-person</button>
-          </div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-            <select style="background: #fff; border: 1px solid #ccc; border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 600; color: #333;">
+            <div style="position: relative; display: inline-flex; align-items: center; color: #555;"><select style="appearance: none; -webkit-appearance: none; background: #fff; border: 1px solid #ccc; border-radius: 999px; padding: 7px 32px 7px 14px; font-family: inherit; font-size: 13px; font-weight: 700; color: #555; cursor: pointer;">
               <option>Language</option>
               <option>English</option>
               <option>Hebrew</option>
               <option>Spanish</option>
-            </select>
+            </select><span style="position: absolute; right: 13px; pointer-events: none;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" style="display:block;flex:none"><path d="M2 3.5l3 3 3-3"/></svg></span></div>
             <div style="position: relative;">
-              <button onClick="{{ toggleLocationOpen }}" style="{{ locationButtonStyle }}">{{ locationButtonLabel }} &#9662;</button>
+              <button onClick="{{ toggleLocationOpen }}" style="{{ locationButtonStyle }}">{{ locationButtonLabel }} <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" style="display:block;flex:none"><path d="M2 3.5l3 3 3-3"/></svg></button>
               <sc-if value="{{ locationOpen }}" hint-placeholder-val="{{ false }}">
               <div style="position: absolute; top: calc(100% + 6px); left: 0; z-index: 20; width: 240px; background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); overflow: hidden;">
                 <div style="padding: 8px; border-bottom: 1px solid #eee;">
@@ -590,6 +612,11 @@
               </span>
               Shabbat
             </label>
+          </div>
+          <div style="display: flex; gap: 8px; width: fit-content;">
+            <button onClick="{{ setAllFormat }}" style="{{ allFormatStyle }}">All</button>
+            <button onClick="{{ setLiveFormat }}" style="{{ liveFormatStyle }}">Online</button>
+            <button onClick="{{ setInPersonFormat }}" style="{{ inPersonFormatStyle }}">In-person</button>
           </div>
         </div>
         </sc-if>
@@ -775,9 +802,22 @@
 </div>
 </sc-if>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showThumbnailRow&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Left column&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;eventsOverflow&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;fit&quot;,&quot;scroll&quot;],&quot;default&quot;:&quot;scroll&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Live events&quot;},&quot;showThumbnailRow&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Left column&quot;}}">
 class Component extends DCLogic {
-  state = { view: 'desktop', eventsTab: 'upcoming', shabbatOnly: false, eventFormat: 'all', locations: [], locationOpen: false, locationSearch: '' };
+  state = { view: 'desktop', eventsTab: 'upcoming', shabbatOnly: false, eventFormat: 'all', locations: [], locationOpen: false, locationSearch: '', moreCount: 0 };
+  listRef = React.createRef();
+  mode() { return this.props.eventsOverflow || 'scroll'; }
+  fitEvents() {
+    const box = this.listRef.current; if (!box) return;
+    const items = box.querySelectorAll(':scope > div > div');
+    const fit = this.mode() === 'fit';
+    const limit = box.getBoundingClientRect().bottom + 1;
+    let hidden = 0;
+    items.forEach(el => { el.style.visibility = ''; });
+    if (fit) items.forEach(el => { if (el.getBoundingClientRect().bottom > limit) { el.style.visibility = 'hidden'; hidden++; } });
+    if (hidden !== this.state.moreCount) this.setState({ moreCount: hidden });
+  }
+  componentDidUpdate() { this.fitEvents(); }
   ALL_CENTRES = ['New York', 'Los Angeles', 'Miami', 'Boca Raton', 'San Diego', 'San Francisco', 'Boston', 'Chicago', 'Dallas', 'Houston', 'Atlanta', 'Toronto', 'Vancouver', 'Montreal', 'Mexico City', 'London', 'Paris', 'Tel Aviv', 'Jerusalem', 'Sao Paulo', 'Buenos Aires', 'Madrid', 'Barcelona', 'Milan', 'Rome', 'Amsterdam', 'Zurich', 'Vienna', 'Berlin', 'Moscow', 'Kiev', 'Warsaw', 'Sydney', 'Melbourne', 'Johannesburg', 'Cape Town', 'Hong Kong', 'Singapore', 'Tokyo', 'Seoul', 'Mumbai', 'Dubai', 'Istanbul', 'Athens', 'Lisbon', 'Bogota', 'Lima', 'Santiago', 'Panama City', 'Online'];
   componentDidMount() {
     this._onClick = (e) => {
@@ -806,10 +846,30 @@ class Component extends DCLogic {
       }
     };
     document.addEventListener('click', this._onClick);
+    this._ro = new ResizeObserver(() => this.fitEvents());
+    const obs = () => { if (this.listRef.current) this._ro.observe(this.listRef.current); };
+    obs(); this._obsT = setInterval(() => { obs(); this.fitEvents(); }, 800);
+    this.fitEvents();
   }
-  componentWillUnmount() { document.removeEventListener('click', this._onClick); }
+  componentWillUnmount() { document.removeEventListener('click', this._onClick); this._ro && this._ro.disconnect(); clearInterval(this._obsT); }
+  tabStyle(active) {
+    return 'background:none;border:none;border-bottom:2.5px solid ' + (active ? '#111' : 'transparent') +
+      ';color:' + (active ? '#111' : '#555') +
+      ';padding:0 0 10px;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;white-space:nowrap;margin-bottom:-1px;';
+  }
   renderVals() {
+    const isScroll = this.mode() === 'scroll';
+    const segBtn = on => (on ? 'background:#111;color:#fff;' : 'background:transparent;color:#111;') + 'padding:8px 14px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;';
     return {
+      isScrollMode: isScroll,
+      listRef: this.listRef,
+      listScrollStyle: 'position:absolute;inset:0;overflow-y:' + (isScroll ? 'auto' : 'hidden') + ';' + (isScroll ? 'padding-bottom:40px;box-sizing:border-box;overscroll-behavior:contain;' : ''),
+      hasMore: !isScroll && this.state.moreCount > 0,
+      moreCount: this.state.moreCount,
+      setFitMode: () => this.setState({ overflowMode: 'fit' }),
+      setScrollMode: () => this.setState({ overflowMode: 'scroll' }),
+      fitBtnStyle: segBtn(!isScroll),
+      scrollBtnStyle: segBtn(isScroll),
       showThumbnailRow: this.props.showThumbnailRow ?? true,
       isDesktop: this.state.view === 'desktop',
       isMobile: this.state.view === 'mobile',
@@ -819,12 +879,8 @@ class Component extends DCLogic {
       isMyEventsTab: this.state.eventsTab === 'my',
       setUpcomingTab: () => this.setState({ eventsTab: 'upcoming' }),
       setMyEventsTab: () => this.setState({ eventsTab: 'my' }),
-      upcomingTabStyle: this.state.eventsTab === 'upcoming'
-        ? 'background:#111;color:#fff;border:1px solid #111;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;'
-        : 'background:transparent;color:#555;border:1px solid #ccc;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;',
-      myEventsTabStyle: this.state.eventsTab === 'my'
-        ? 'background:#111;color:#fff;border:1px solid #111;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;'
-        : 'background:transparent;color:#555;border:1px solid #ccc;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;',
+      upcomingTabStyle: this.tabStyle(this.state.eventsTab === 'upcoming'),
+      myEventsTabStyle: this.tabStyle(this.state.eventsTab === 'my'),
       shabbatOnly: this.state.shabbatOnly,
       toggleShabbat: () => this.setState(s => ({ shabbatOnly: !s.shabbatOnly })),
       shabbatSwitchTrackStyle: 'position:relative;display:inline-block;width:34px;height:20px;border-radius:999px;flex:none;transition:background 0.15s;background:' + (this.state.shabbatOnly ? '#111' : '#ccc') + ';',
